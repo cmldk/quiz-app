@@ -55,7 +55,9 @@ export const Question = ({
           {options.map((option, index) => (
             <label
               key={`q-${question.id}-${index}`}
-              className="mb-4 cursor-pointer"
+              className={`mb-4 ${
+                !isClickable ? 'cursor-default text-gray-400' : 'cursor-pointer'
+              }`}
             >
               <input
                 type="radio"
